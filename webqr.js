@@ -12,7 +12,7 @@ var v=null;
 
 var imghtml='<div id="qrfile"><canvas id="out-canvas" width="320" height="240"></canvas>'+
     '<div id="imghelp">Arrastra y suelta un codigo QR aquí'+
-	'<br>o seleccione un archivo'+
+	' o seleccione un archivo'+
 	'<input type="file" onchange="handleFiles(this.files)"/>'+
 	'</div>'+
 '</div>';
@@ -137,13 +137,13 @@ function load()
 	{
 		initCanvas(800, 600);
 		qrcode.callback = read;
-		document.getElementById("mainbody").style.display="inline";
+		//document.getElementById("mainbody").style.display="inline";
         setwebcam();
 	}
 	else
 	{
-		document.getElementById("mainbody").style.display="inline";
-		document.getElementById("mainbody").innerHTML='<p id="mp1">QR code scanner for HTML5 capable browsers</p><br>'+
+		//document.getElementById("mainbody").style.display="inline";
+		//document.getElementById("mainbody").innerHTML='<p id="mp1">QR code scanner for HTML5 capable browsers</p><br>'+
         '<br><p id="mp2">sorry your browser is not supported</p><br><br>'+
         '<p id="mp1">try <a href="http://www.mozilla.com/firefox"><img src="firefox.png"/></a> or <a href="http://chrome.google.com"><img src="chrome_logo.gif"/></a> or <a href="http://www.opera.com"><img src="Opera-logo.png"/></a></p>';
 	}
@@ -232,7 +232,7 @@ function setimg()
     //document.getElementById("qrimg").src="qrimg.png";
     //document.getElementById("webcamimg").src="webcam2.png";
     document.getElementById("qrimg").style.opacity=1.0;
-    document.getElementById("webcamimg").style.opacity=0.2;
+    document.getElementById("webcamimg").style.opacity=1.0;
     var qrfile = document.getElementById("qrfile");
     qrfile.addEventListener("dragenter", dragenter, false);  
     qrfile.addEventListener("dragover", dragover, false);  
